@@ -9,7 +9,7 @@ TO_TEST = [
         ("1.0.1b", "1.0.10-alpha.beta"),
         ("1.0.0-rc.1", "1.0.0"),
         # special test cases
-        ("2.0.0a-rc", "2.0.0a-yy"),
+        ("2.0.0a-yy", "2.0.0a-rc",),
         # test cases from https://semver.org/
         ("1.0.0-alpha", "1.0.0-alpha.1"),
         ("1.0.0-alpha.1", "1.0.0-alpha.beta"),
