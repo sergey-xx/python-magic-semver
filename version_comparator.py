@@ -1,7 +1,7 @@
 import re
 from copy import copy
 from functools import total_ordering
-from typing import Iterable
+from typing import Container
 
 
 @total_ordering
@@ -28,7 +28,7 @@ class Version:
         r"(?P<buildmetadata>[0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$"
     )
     suffix_splitters: str = r'[+.-]'
-    highest_priority_tags: Iterable = ('rc', 'preview')
+    highest_priority_tags: Container[str] = ('rc', 'preview')
 
     def __init__(self, version: str):
         match = re.search(self.pattern, version)
